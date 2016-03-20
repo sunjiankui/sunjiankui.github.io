@@ -13,21 +13,7 @@ var has = Object.prototype.hasOwnProperty;
  * @api public
  */
 
-function require(path, parent, orig) {
-  var resolved = require.resolve(path);
-
-  // lookup failed
-  if (null == resolved) {
-    orig = orig || path;
-    parent = parent || 'root';
-    var err = new Error('Failed to require "' + orig + '" from "' + parent + '"');
-    err.path = orig;
-    err.parent = parent;
-    err.require = true;
-    throw err;
-  }
-
-  var module = require.modules[resolved];
+lved];
 
   // perform real require()
   // by invoking the module's
